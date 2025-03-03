@@ -17,6 +17,8 @@ console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 // (Let op: dit is _niet_ de console van je browser, maar van NodeJS, in je terminal)
 // console.log(apiResponseJSON)
 
+const vacaturesResponse = await fetch('https://fdnd-agency.directus.app/items/dda_agencies_vacancies')  
+const vacaturesResponseJSON = await vacaturesResponse.json()
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
@@ -37,7 +39,7 @@ app.set('views', './views')
 app.get('/', async function (request, response) {
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
-   response.render('vacatures.liquid')
+   response.render('vacatures.liquid', {vacatures: vacaturesResponseJSON.data})
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
