@@ -1,0 +1,64 @@
+{% render 'partials/head.liquid', title: 'Vacatures' %}
+
+{% render 'partials/header.liquid' %}
+
+<aside>
+    <a href="/vacatures">terug naar home</a>
+    <h1>Vacatures</h1>
+    <p>Verslim je carrière bij de beste digitale bureaus van Nederland. Pak je rol als developer of designer,
+        researcher, als scrum master of marketeer, als strateeg. Start of groei door – en laat zien wat je kan.</p>
+</aside>
+
+<form>
+    <label for="search">Zoek vacatures</label>
+    <input type="text" id="search" name="search" placeholder="Zoek vacatures">
+    <select>
+        <option value="all">Expertise</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Fullstack Developer</option>
+        <option value="designer">Designer</option>
+        <option value="marketeer">Marketeer</option>
+    </select>
+    <select>
+        <option value="all">Soort</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Fullstack Developer</option>
+        <option value="designer">Designer</option>
+        <option value="marketeer">Marketeer</option>
+    </select>
+    <select>
+        <option value="all">Locatie</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Fullstack Developer</option>
+        <option value="designer">Designer</option>
+        <option value="marketeer">Marketeer</option>
+    </select>
+    <select>
+        <option value="all">Voertaal</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Fullstack Developer</option>
+        <option value="designer">Designer</option>
+        <option value="marketeer">Marketeer</option>
+    </select>
+</form>
+
+<main>
+    <ul>
+        <li>
+            <h2>Digital Product Designer</h2>
+            <p><span>ENG & NL</span><span>VALSPLAT</span><span>32-40 UUR</span><span>NIEUWERSLUIS</span></p>
+            <a href="#">BEKIJKEN →</a>
+        </li>
+        <li>
+            <h2>Traffic Manager</h2>
+            <p><span>ENG & NL</span><span>VALSPLAT</span><span>32-40 UUR</span><span>NIEUWERSLUIS</span></p>
+            <a href="#">BEKIJKEN →</a>
+        </li>
+    </ul>
+</main>
+
+{% render 'partials/footer.liquid' %}
