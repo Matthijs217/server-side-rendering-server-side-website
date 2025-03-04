@@ -12,7 +12,7 @@
 <form>
     <label for="search">Zoek vacatures</label>
     <input type="text" id="search" name="search" placeholder="Zoek vacatures">
-    <select>
+    <select class="btn">
         <option value="all">Expertise</option>
         <option value="frontend">Frontend Developer</option>
         <option value="backend">Backend Developer</option>
@@ -50,7 +50,7 @@
     <ul>
         {% for vacature in vacatures %}
         <li>
-            <h2>{{vacature.title}}</h2>
+            <h4>{{vacature.title}}</h4>
             <p><span>ENG & NL</span><span>VALSPLAT</span><span>{{vacature.hours}}</span><span>{{vacature.locatie}}</span></p>
             <a href="{{vacature.url}}">BEKIJKEN →</a>
         </li>
