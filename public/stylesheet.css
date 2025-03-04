@@ -8,12 +8,14 @@
 }
 
 body {
+    /* Colors */
     --black: #222226;
     --grey: #666666;
     --white: #FFFFFF;
     --blue: #364BF7;
     --letter-spacing: -0.04em; /* -4% van de font size */
 
+    /* Sizes */
     --size-xs: 0.5rem;
     --size-sm: 1rem;
     --size-md: 2rem;
@@ -21,19 +23,32 @@ body {
     --size-xl: 4rem;
     --size-xxl: 6rem;
 
+    /* Fonts */
     --primary-font: "archivo", verdana;
     --secondary-font: "martianmono", sans-serif;
 
-    --font-size-s: 14px;
-    --font-size-m: 16px;
-    --font-size-l: 18px;
-
+    /* Line heights */
     --line-height-s: 1.5;
     --line-height-m: 1.6;
     --line-height-l: 1.7;
 
+    /* Fonts */
     --font-weight-heading: SemiBold;
     --font-weight-body: Regular;
+
+    /* Spacing */
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-48: 48px;
+    --spacing-64: 64px;
+    --spacing-72: 72px;
+    --spacing-96: 96px;
+    --spacing-104: 104px;
+    --spacing-128: 128px;
 
     --border: 1px solid black;
 
@@ -97,6 +112,13 @@ p,
   font-weight: 400; /* stays regular */
   letter-spacing: 0;
   line-height: clamp(1.5rem, 2.5vw, var(--size-md));
+}
+
+a {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: var(--size-sm);
 }
 
 .label {
