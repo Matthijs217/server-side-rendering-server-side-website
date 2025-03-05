@@ -15,38 +15,40 @@
 <form>
     <label for="search">Zoek vacatures</label>
     <input type="text" id="search" name="search" placeholder="Zoek vacatures">
-    <select class="btn">
-        <option value="all">Expertise</option>
-        <option value="frontend">Frontend Developer</option>
-        <option value="backend">Backend Developer</option>
-        <option value="fullstack">Fullstack Developer</option>
-        <option value="designer">Designer</option>
-        <option value="marketeer">Marketeer</option>
-    </select>
-    <select>
-        <option value="all">Soort</option>
-        <option value="frontend">Frontend Developer</option>
-        <option value="backend">Backend Developer</option>
-        <option value="fullstack">Fullstack Developer</option>
-        <option value="designer">Designer</option>
-        <option value="marketeer">Marketeer</option>
-    </select>
-    <select>
-        <option value="all">Locatie</option>
-        <option value="frontend">Frontend Developer</option>
-        <option value="backend">Backend Developer</option>
-        <option value="fullstack">Fullstack Developer</option>
-        <option value="designer">Designer</option>
-        <option value="marketeer">Marketeer</option>
-    </select>
-    <select>
-        <option value="all">Voertaal</option>
-        <option value="frontend">Frontend Developer</option>
-        <option value="backend">Backend Developer</option>
-        <option value="fullstack">Fullstack Developer</option>
-        <option value="designer">Designer</option>
-        <option value="marketeer">Marketeer</option>
-    </select>
+    <div class="form-filters">
+        <select class="btn">
+            <option value="all">Expertise</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Fullstack Developer</option>
+            <option value="designer">Designer</option>
+            <option value="marketeer">Marketeer</option>
+        </select>
+        <select>
+            <option value="all">Soort</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Fullstack Developer</option>
+            <option value="designer">Designer</option>
+            <option value="marketeer">Marketeer</option>
+        </select>
+        <select>
+            <option value="all">Locatie</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Fullstack Developer</option>
+            <option value="designer">Designer</option>
+            <option value="marketeer">Marketeer</option>
+        </select>
+        <select>
+            <option value="all">Voertaal</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Fullstack Developer</option>
+            <option value="designer">Designer</option>
+            <option value="marketeer">Marketeer</option>
+        </select>
+    </div>
 </form>
 
 <main>
@@ -54,7 +56,8 @@
         {% for vacature in vacatures %}
         <li>
             <h4>{{vacature.title}}</h4>
-            <p><span>ENG & NL</span><span>VALSPLAT</span><span>{{vacature.hours}}</span><span>{{vacature.locatie}}</span></p>
+            <p><span>ENG &
+                    NL</span><span>VALSPLAT</span><span>{{vacature.hours}}</span><span>{{vacature.locatie}}</span></p>
             <a href="{{vacature.url}}">BEKIJKEN →</a>
         </li>
         {% endfor %}

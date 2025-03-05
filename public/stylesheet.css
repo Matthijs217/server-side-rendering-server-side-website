@@ -24,8 +24,8 @@ body {
     --size-xxl: 6rem;
 
     /* Fonts */
-    --primary-font: "archivo", verdana;
-    --secondary-font: "martianmono", sans-serif;
+    --primary-font: "archivo", sans-serif;
+    --secondary-font: "Martian Mono", monospace;
 
     /* Line heights */
     --line-height-s: 1.5;
