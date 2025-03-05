@@ -112,6 +112,7 @@ p,
   font-weight: 400; /* stays regular */
   letter-spacing: 0;
   line-height: clamp(1.5rem, 2.5vw, var(--size-md));
+  text-transform: uppercase;
 }
 
 a {
