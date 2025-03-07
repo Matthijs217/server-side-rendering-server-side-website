@@ -42,6 +42,12 @@ app.get('/', async function (request, response) {
    response.render('vacatures.liquid', {vacatures: vacaturesResponseJSON.data})
 })
 
+app.get('/vacature', async function (request, response) {
+  // Render index.liquid uit de Views map
+  // Geef hier eventueel data aan mee
+  response.render('vacature.liquid', {vacatures: vacaturesResponseJSON.data})
+})
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
