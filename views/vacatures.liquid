@@ -13,25 +13,45 @@
 </aside>
 
 <form>
-    <label for="search">Zoek vacatures</label>
-    <input type="text" id="search" name="search" placeholder="Zoek vacatures">
-
-    <button>
-        <p>provincie</p>
-        <span><img src="assets/plus.svg"></span>
-    </button>
-    
+    <div class="inputbox">
+        <label for="search">Zoek vacatures</label>
+        <input type="text" id="search" name="search">
+    </div>
+    <div class="filter-btns">
+        <button>
+            <p>provincie</p>
+            <span><img src="assets/plus.svg"></span>
+        </button>
+        <button>
+            <p>soort</p>
+            <span><img src="assets/plus.svg"></span>
+        </button>
+        <button>
+            <p>uren</p>
+            <span><img src="assets/plus.svg"></span>
+        </button>
+        <button>
+            <p>voertaal</p>
+            <span><img src="assets/plus.svg"></span>
+        </button>
+    </div>
 </form>
 
 <main>
-    <ul>
-        {% for vacature in vacatures %}
+    <ul class="vacancies">
+        {% for agency in vacatures %}
+        {% for vacature in agency.vacancies %}
         <li>
-            <h4>{{vacature.title}}</h4>
-            <p><span>ENG &
-                    NL</span><span>VALSPLAT</span><span>{{vacature.hours}}</span><span>{{vacature.locatie}}</span></p>
-            <a href="{{vacature.url}}">BEKIJKEN →</a>
+            <h4>{{ vacature.title }}</h4>
+            <div>
+                <span>ENG & NL</span>
+                <span class="agency-title">{{  agency.title|title }}</span>
+                <span>{{ vacature.hours }} uur</span>
+                <span>{{ vacature.locatie }}</span>
+            </div>
+            <a href="{{ vacature.url }}">bekijken <img src="assets/blue-arrow-up.svg"></a>
         </li>
+        {% endfor %}
         {% endfor %}
     </ul>
 </main>
