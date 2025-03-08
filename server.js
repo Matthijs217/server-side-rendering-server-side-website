@@ -6,6 +6,9 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 
+const vacaturesResponse = await fetch('https://fdnd-agency.directus.app/items/dda_agencies/?fields=id,title,vacancies.*')  
+const vacaturesResponseJSON = await vacaturesResponse.json()
+
 console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
 // Doe een fetch naar de data die je nodig hebt
 // const apiResponse = await fetch('...')
@@ -34,17 +37,21 @@ app.set('views', './views')
 
 // Maak een GET route voor de index (meestal doe je dit in de root, als /)
 app.get('/', async function (request, response) {
-  const vacaturesResponse = await fetch('https://fdnd-agency.directus.app/items/dda_agencies/?fields=id,title,vacancies.*')  
-  const vacaturesResponseJSON = await vacaturesResponse.json()
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
    response.render('vacatures.liquid', {vacatures: vacaturesResponseJSON.data})
 })
 
-app.get('/vacature', async function (request, response) {
-  // Render index.liquid uit de Views map
+app.get('/vacature/:id', async function (request, response) {
+
+  const vacature = request.params.id
+  const vacaturesResponse = await fetch(`https://fdnd-agency.directus.app/items/dda_agencies/?filter={"id":"${vacature}"}`)
+  const vacaturesResponseJSON = await vacaturesResponse.json()
+
+  console.log(vacaturesResponseJSON.data)
+  
   // Geef hier eventueel data aan mee
-  response.render('vacature.liquid', {vacatures: vacaturesResponseJSON.data})
+  response.render('vacature.liquid', { vacatures: vacaturesResponseJSON.data[0]});
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen

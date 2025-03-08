@@ -1,0 +1,9 @@
+{% render 'partials/head.liquid', title:"vacature" %}
+{% render 'partials/header.liquid' %}
+
+<main>
+    <h1>{{ vacatures.title }}</h1>
+    <a href="vacature/{{ vacature.id }}">bekijken <img src="assets/blue-arrow-up.svg"></a>
+</main>
+
+{% render 'partials/footer.liquid' %}

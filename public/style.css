@@ -4,12 +4,12 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: .35rem 1rem 0 1rem;
+    padding: var(--spacing-12) var(--spacing-16);
     border-bottom: var(--border);
     background-color: var(--white);
     & img {
-        height: 65px;
-        width: 65px;
+        height: 40px;
+        width: auto;
     }
 }
 
@@ -92,7 +92,7 @@ aside {
             color: var(--blue);
         }
     }
-    & p {
+    & dd {
         margin-top: var(--spacing-16);
         text-align: center;
     }
@@ -162,12 +162,14 @@ main {
             font-family: var(--secondary-font);
             & span {
                 margin-right: var(--spacing-16);
+                font-size: 0.85rem;
             }
         }
         & a {
             display: flex;
             align-items: center;
             gap: var(--spacing-8);
+            text-transform: uppercase;
         }
     }
 }

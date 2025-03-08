@@ -8,8 +8,8 @@
         terug naar home
     </a>
     <h1>Vacatures</h1>
-    <p>Verslim je carrière bij de beste digitale bureaus van Nederland. Pak je rol als developer of designer,
-        researcher, als scrum master of marketeer, als strateeg. Start of groei door – en laat zien wat je kan.</p>
+    <dd>Verslim je carrière bij de beste digitale bureaus van Nederland. Pak je rol als developer of designer,
+        researcher, als scrum master of marketeer, als strateeg. Start of groei door – en laat zien wat je kan.</dd>
 </aside>
 
 <form>
@@ -49,7 +49,7 @@
                 <span>{{ vacature.hours }} uur</span>
                 <span>{{ vacature.locatie }}</span>
             </div>
-            <a href="{{ vacature.url }}">bekijken <img src="assets/blue-arrow-up.svg"></a>
+            <a href="vacature/{{ vacature.id }}">bekijken <img src="assets/blue-arrow-up.svg"></a>
         </li>
         {% endfor %}
         {% endfor %}
