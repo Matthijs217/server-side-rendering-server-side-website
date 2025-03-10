@@ -60,6 +60,11 @@ app.post('/', async function (request, response) {
   response.redirect(303, '/')
 })
 
+
+app.use((request, response, next) => {
+  response.render('404.liquid');
+})
+
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80
 app.set('port', process.env.PORT || 8000)

@@ -140,7 +140,7 @@ form {
     }
 }
 
-main {
+.vacancies-container {
     border-top: 2px solid var(--black);
 
 }
@@ -224,5 +224,26 @@ footer {
     & img {
         height: 110px;
         width: 110px;
+    }
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--black);
+    padding: var(--spacing-64) var(--spacing-16);
+    & dd {
+        margin-top: var(--spacing-16);
+        font-size: var(--size-sm);
+        line-height: 1.5rem;
+    }
+    & a {
+        font-family: var(--primary-font);
+        color: var(--blue);
+        text-decoration: underline;
     }
 }
