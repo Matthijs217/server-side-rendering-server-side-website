@@ -133,6 +133,7 @@ form {
         padding: var(--spacing-12);
         font-family: var(--secondary-font);
         font-size: .75rem;
+        text-transform: uppercase;
     }
     & span {
         border-left: var(--border);
@@ -160,9 +161,12 @@ form {
         padding-bottom: var(--spacing-32);
         & div {
             font-family: var(--secondary-font);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-16);
             & span {
                 margin-right: var(--spacing-16);
-                font-size: 0.85rem;
+                font-size: 0.875rem;
             }
         }
         & a {

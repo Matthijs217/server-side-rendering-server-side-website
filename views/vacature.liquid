@@ -4,7 +4,7 @@
 <main class="vacancie-container">
     <div>
         <a href="/"><img src="../assets/arrow-left.svg">terug naar alle vacatures</a>
-        <h1>{{ vacatures.title }}</h>
+        <h1>{{ vacatures.title }}</h1>
         <p>{{ vacatures.locatie }}</p>
     </div>
     <img class="sfeerphoto" src="https://fdnd-agency.directus.app/assets/{{ vacatures.photo }}" alt="sfeerfoto">
@@ -18,7 +18,6 @@
 
     <h2>locatie</h2>
     <dd>{{ vacatures.locatie }}</dd>
-
 
     <h2>solliciteren</h2>
     <a class="btn" href="vacature/{{ vacature.id }}">bekijken <img src="../assets/blue-arrow-up.svg"></a>
