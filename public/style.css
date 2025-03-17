@@ -166,14 +166,12 @@ form {
 
 .vacancies-container {
     border-top: 2px solid var(--black);
-    & a {
+    & .add-vacancie {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: var(--spacing-32);
-        font-size: 1.25rem;
         & img {
-            padding-top: 2px;
             padding-left: var(--spacing-8);
         }
     }
@@ -312,3 +310,4 @@ footer {
         text-decoration: underline;
     }
 }
+
