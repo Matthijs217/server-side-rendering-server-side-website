@@ -166,7 +166,17 @@ form {
 
 .vacancies-container {
     border-top: 2px solid var(--black);
-
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: var(--spacing-32);
+        font-size: 1.25rem;
+        & img {
+            padding-top: 2px;
+            padding-left: var(--spacing-8);
+        }
+    }
 }
 
 .vacancies {
