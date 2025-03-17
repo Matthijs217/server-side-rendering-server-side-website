@@ -65,6 +65,11 @@ app.get('/toevoegen', async function (request, response) {
   response.render('toevoegen.liquid')
 })
 
+app.post('/toevoegen', async function (request, response) {
+  console.log("gepost")
+  response.redirect(303, '/')
+})
+
 app.use((request, response, next) => {
   response.render('404.liquid');
 })
