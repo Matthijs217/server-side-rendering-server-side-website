@@ -42,6 +42,14 @@ app.get('/', async function (request, response) {
    response.render('vacatures.liquid', {vacatures: vacaturesResponseJSON.data})
 })
 
+// Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
+// Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
+app.post('/', async function (request, response) {
+  // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
+  // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
+  response.redirect(303, '/')
+})
+
 app.get('/vacature/:id', async function (request, response) {
   
   const vacature = request.params.id
@@ -52,14 +60,10 @@ app.get('/vacature/:id', async function (request, response) {
   response.render('vacature.liquid', { vacatures: vacaturesResponseJSON.data[0]});
 })
 
-// Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
-// Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
-app.post('/', async function (request, response) {
-  // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
-  // Er is nog geen afhandeling van een POST, dus stuur de bezoeker terug naar /
-  response.redirect(303, '/')
-})
+app.get('/toevoegen', async function (request, response) {
 
+  response.render('toevoegen.liquid')
+})
 
 app.use((request, response, next) => {
   response.render('404.liquid');
